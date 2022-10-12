@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a19b3d34-bbe8-4b15-9dde-f2d35e9ab97b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Projekt/Train.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Projekt/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/BlueTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/BlueTrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/RedTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/RedTrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/YellowTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/YellowTrain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

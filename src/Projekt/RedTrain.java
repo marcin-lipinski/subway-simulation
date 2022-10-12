@@ -1,23 +1,12 @@
 package Projekt;
 
-public class RedTrain extends Thread
-{
-    public int[] route;
-    public Shared shared;
-    int tail=25;
-    int head;
-    int temp;
-    int direction=1;
-    Controller controller;
-    int numberOfCarts;
-
+public class RedTrain extends Train{
     public RedTrain(Shared shared, int numberOfCarts, Controller controller, int[] route)
     {
-        this.shared = shared;
-        this.numberOfCarts=numberOfCarts;
-        this.head=tail-(numberOfCarts-1);
-        this.controller = controller;
-        this.route=route;
+        super(shared, numberOfCarts, controller, route);
+        this.tail = 25;
+        this.direction = 1;
+        this.head = tail - (numberOfCarts - 1);
     }
     public void run()
     {
