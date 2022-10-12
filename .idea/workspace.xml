@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a19b3d34-bbe8-4b15-9dde-f2d35e9ab97b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Projekt/Train.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Projekt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/BlueTrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/BlueTrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/RedTrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/RedTrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Shared.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Shared.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/YellowTrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/YellowTrain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/BlueTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/BlueTrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/RedTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/RedTrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/Shared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Shared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Train.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/YellowTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/YellowTrain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

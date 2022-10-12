@@ -16,7 +16,7 @@ public class Main extends Application
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("scene.fxml"));
         root = fxmlLoader.load();
         Scene scene = new Scene(root);
-        Image icon = new Image("src/resources/icon.png");
+        Image icon = new Image("icon.png");
         stage.getIcons().add(icon);
         stage.setTitle("Subway Simulator");
         stage.setResizable(false);

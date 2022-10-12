@@ -6,6 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,7 +27,9 @@ public class Controller implements Initializable
     public int timeOfRedDropping, timeOfBlueDropping, timeOfYellowDropping;
     public int numberOfCarts;
 
-    private String[][] carsImagesURLs;
+    private String[][] carsImagesURLs = new String[][]{{"file:yellow_loco.png", "file:yellow_car.png"},
+                                                    {"file:red_loco.png", "file:red_car.png"},
+                                                    {"file:blue_loco.png", "file:blue_car.png"}};
     private Thread P1, P2, P3;
     private int isRunning = 1;
     private final int[][] route={{0,1,2,3,4,5,7,9,11,13,15,17,19,25,31,33,35,37,39,41,43,49,50,51,52,53,0},
@@ -40,9 +46,6 @@ public class Controller implements Initializable
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        carsImagesURLs = new String[][]{{"src/resources/yellow_loco.png", "src/resources/yellow_car.png"},
-                                        {"src/resources/red_loco.png", "src/resources/red_car.png"},
-                                        {"src/resources/blue_loco.png", "src/resources/blue_car.png"}};
         startButton.setDisable(true);
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(2,12);
         valueFactory.setValue(2);
@@ -53,7 +56,6 @@ public class Controller implements Initializable
         addingListeners();
         setInitialSpeedOfTrains();
         setInitialTimeOfDropping();
-        setCarsImages();
     }
 
     private void setInitialSpeedOfTrains(){
@@ -104,6 +106,7 @@ public class Controller implements Initializable
 
     @FXML
     public void placeTrains(){
+        setCarsImages();
         changeButtonsState();
         for (int i = 0; i <numberOfCarts; i++)
         {
@@ -166,8 +169,10 @@ public class Controller implements Initializable
     }
 
     private void setSingleCar(int loco, int car, String image){
+        String imager = "file:yellow_car.png";
+        System.out.println(image);
         carts[loco][car] = new ImageView();
-        carts[loco][car].setImage(new Image(image));
+        carts[loco][car].setImage(new Image(new File(imager).toURI().toString()));
         carts[loco][car].setFitHeight(40);
         carts[loco][car].setFitWidth(60);
     }
@@ -213,9 +218,9 @@ public class Controller implements Initializable
     }
 
     private void stopThreads(){
-        P1.interrupt();
-        P2.interrupt();
-        P3.interrupt();
+        P1.stop();
+        P2.stop();
+        P3.stop();
     }
     private void initThreads(Shared shared){
         P1 = new YellowTrain(shared, numberOfCarts,this, route[0]);
