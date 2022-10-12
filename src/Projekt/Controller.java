@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable
 {
-    @FXML private Button startButton, exitButton, placeTrainsButton;
+    @FXML private Button startButton, placeTrainsButton;
     @FXML private Slider speedOfYellowTrainSlider, speedOfRedTrainSlider, speedOfBlueTrainSlider;
     @FXML private Slider timeOfRedDroppingSlider, timeOfYellowDroppingSlider, timeOfBlueDroppingSlider;
     @FXML private Label speedOfYellowTrainLabel, speedOfRedTrainLabel, speedOfBlueTrainLabel;
@@ -39,8 +39,7 @@ public class Controller implements Initializable
                                 {650,627},{710,627},{770,627}, {830,627},{890,627},{950,627},{1010,627},{1070,627}};
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
+    public void initialize(URL url, ResourceBundle resourceBundle){
         carsImagesURLs = new String[][]{{"src/resources/yellow_loco.png", "src/resources/yellow_car.png"},
                                         {"src/resources/red_loco.png", "src/resources/red_car.png"},
                                         {"src/resources/blue_loco.png", "src/resources/blue_car.png"}};
@@ -104,8 +103,7 @@ public class Controller implements Initializable
     }
 
     @FXML
-    public void placeTrains()
-    {
+    public void placeTrains(){
         changeButtonsState();
         for (int i = 0; i <numberOfCarts; i++)
         {
@@ -175,15 +173,13 @@ public class Controller implements Initializable
     }
 
     @FXML
-    public void exitButtonOnClick() throws InterruptedException
-    {
+    public void exitButtonOnClick() throws InterruptedException{
         if(isRunning==0)startButtonOnClick();
         System.exit(0);
     }
 
     @FXML
-    public void startButtonOnClick() throws InterruptedException
-    {
+    public void startButtonOnClick() throws InterruptedException{
         isRunning = (isRunning + 1) % 2;
         if (isRunning == 0)
         {
@@ -217,9 +213,9 @@ public class Controller implements Initializable
     }
 
     private void stopThreads(){
-        P1.stop();
-        P2.stop();
-        P3.stop();
+        P1.interrupt();
+        P2.interrupt();
+        P3.interrupt();
     }
     private void initThreads(Shared shared){
         P1 = new YellowTrain(shared, numberOfCarts,this, route[0]);
@@ -231,79 +227,89 @@ public class Controller implements Initializable
     public void moveTrain(int head, int direction, int nr){
         for(int i=0;i<numberOfCarts;i++)
         {
-            if(direction==1)
+            if(direction == 1)
             {
-                if((route[nr][head+i]>5 && route[nr][head+i]<20) || (route[nr][head+i]>30 && route[nr][head+i]<45))
-                {
-                    carts[nr][i].setRotate(-90);
-                    if(i==numberOfCarts-1)carts[nr][i].setRotate(90);
-                }
-                else if(nr==0)
-                {
-                    if(route[nr][head+i]!=25)
-                    {
-                        carts[nr][i].setRotate(180);
-                        if(i==numberOfCarts-1)carts[nr][i].setRotate(0);
+                if(!rotateLoco(head, nr, i)){
+                    switch (nr) {
+                        case 0 -> moveYellowTrainBack(head, i);
+                        case 1 -> moveRedTrainBack(head, i);
+                        case 2 -> moveBlueTrainBack(i);
                     }
-                }
-                else if(nr==1)
-                {
-                    if(route[nr][head+i]>=45)
-                    {
-                        carts[nr][i].setRotate(0);
-                        if(i==numberOfCarts-1)carts[nr][i].setRotate(180);
-                    }
-                    else
-                    {
-                        carts[nr][i].setRotate(180);
-                        if(i==numberOfCarts-1)carts[nr][i].setRotate(0);
-                    }
-                }
-                else if(nr==2)
-                {
-                    carts[nr][i].setRotate(180);
-                    if(i==numberOfCarts-1)carts[nr][i].setRotate(0);
                 }
                 carts[nr][i].setX(railwaysXY[route[nr][head+i]][0]);
                 carts[nr][i].setY(railwaysXY[route[nr][head+i]][1]);
             }
 
-            if(direction==0)
+            if(direction == 0)
             {
-                if((route[nr][head-i]>5 && route[nr][head-i]<20) || (route[nr][head-i]>30 && route[nr][head-i]<45))
-                {
-                    carts[nr][i].setRotate(90);
-                    if(i==numberOfCarts-1)carts[nr][i].setRotate(-90);
-                }
-                else if(nr==0)
-                {
-                    if(route[nr][head-i]!=25)
-                    {
-                        carts[nr][i].setRotate(0);
-                        if (i == numberOfCarts - 1) carts[nr][i].setRotate(180);
+                if(!rotateLoco(head, nr, i)){
+                    switch (nr) {
+                        case 0 -> moveYellowTrainForward(head, i);
+                        case 1 -> moveRedTrainForward(head, i);
+                        case 2 -> moveBlueTrainForward(i);
                     }
-                }
-                else if(nr==1)
-                {
-                    if(route[nr][head-i]>=45)
-                    {
-                        carts[nr][i].setRotate(180);
-                        if (i == numberOfCarts - 1) carts[nr][i].setRotate(0);
-                    }
-                    else
-                    {
-                        carts[nr][i].setRotate(0);
-                        if(i==numberOfCarts-1)carts[nr][i].setRotate(180);
-                    }
-                }
-                else if(nr==2)
-                {
-                    carts[nr][i].setRotate(0);
-                    if(i==numberOfCarts-1)carts[nr][i].setRotate(180);
                 }
                 carts[nr][i].setX(railwaysXY[route[nr][head-i]][0]);
                 carts[nr][i].setY(railwaysXY[route[nr][head-i]][1]);
             }
         }
     }
+
+    private boolean rotateLoco(int head, int nr, int car){
+        if((route[nr][head - car]>5 && route[nr][head-car]<20) || (route[nr][head-car]>30 && route[nr][head-car]<45)){
+            carts[nr][car].setRotate(-90);
+            if(car == numberOfCarts-1) carts[nr][car].setRotate(90);
+            return true;
+        }
+        return false;
+    }
+
+    private void moveRedTrainForward(int head, int i) {
+        if(route[1][head-i]>=45)
+        {
+            carts[1][i].setRotate(180);
+            if (i == numberOfCarts - 1) carts[1][i].setRotate(0);
+        }
+        else
+        {
+            carts[1][i].setRotate(0);
+            if(i==numberOfCarts-1)carts[1][i].setRotate(180);
+        }
+    }
+
+    private void moveRedTrainBack(int head, int i) {
+        if(route[1][head+i]>=45){
+            carts[1][i].setRotate(0);
+            if(i==numberOfCarts-1)carts[1][i].setRotate(180);
+        }
+        else{
+            carts[1][i].setRotate(180);
+            if(i==numberOfCarts-1)carts[1][i].setRotate(0);
+        }
+    }
+
+    private void moveBlueTrainForward(int i) {
+        carts[2][i].setRotate(0);
+        if(i==numberOfCarts-1)carts[2][i].setRotate(180);
+    }
+
+    private void moveBlueTrainBack(int i) {
+        carts[2][i].setRotate(180);
+        if(i==numberOfCarts-1)carts[2][i].setRotate(0);
+    }
+    private void moveYellowTrainForward(int head, int i){
+        if(route[0][head-i]!=25)
+        {
+            carts[0][i].setRotate(0);
+            if (i == numberOfCarts - 1) carts[0][i].setRotate(180);
+        }
+    }
+    private void moveYellowTrainBack(int head, int i) {
+        if(route[0][head+i]!=25){
+            carts[0][i].setRotate(180);
+            if(i==numberOfCarts-1)carts[0][i].setRotate(0);
+        }
+    }
 }
+
+

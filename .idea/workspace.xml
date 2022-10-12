@@ -3,62 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a19b3d34-bbe8-4b15-9dde-f2d35e9ab97b" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../Projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PW_projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PW_projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/PW_projekt/Projekt/scene1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/czerw_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/czerw_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/nieb_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/nieb_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/czerw_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/czerw_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/nieb_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/nieb_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/rozklad_torow_perony.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/underground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/zolty_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/resources/zolty_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/rozklad_torow_perony.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/underground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/zolty_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/PW_projekt/zolty_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/Projekt/scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/Projekt/scene1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/czerw_lokom.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/czerw_lokom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/czerw_wagon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/czerw_wagon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/nieb_lokom.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/nieb_lokom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/nieb_wagon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/nieb_wagon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/czerw_lokom.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/czerw_lokom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/czerw_wagon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/czerw_wagon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/nieb_lokom.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/nieb_lokom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/nieb_wagon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/nieb_wagon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/rozklad_torow_perony.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/rozklad_torow_perony.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/underground.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/underground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/zolty_lokom.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/zolty_lokom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/resources/zolty_wagon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/resources/zolty_wagon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/rozklad_torow_perony.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/rozklad_torow_perony.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/underground.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/underground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/zolty_lokom.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/zolty_lokom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods/production/Projekt/zolty_wagon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mods/production/projekt/zolty_wagon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Projekt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Projekt/scene1.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/czerw_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/czerw_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/nieb_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/nieb_wagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/rozklad_torow_perony.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/underground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/zolty_lokom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/zolty_wagon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
