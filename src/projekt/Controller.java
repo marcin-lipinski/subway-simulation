@@ -1,4 +1,4 @@
-package Projekt;
+package projekt;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -8,8 +8,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,9 +25,9 @@ public class Controller implements Initializable
     public int timeOfRedDropping, timeOfBlueDropping, timeOfYellowDropping;
     public int numberOfCarts;
 
-    private String[][] carsImagesURLs = new String[][]{{"file:yellow_loco.png", "file:yellow_car.png"},
-                                                    {"file:red_loco.png", "file:red_car.png"},
-                                                    {"file:blue_loco.png", "file:blue_car.png"}};
+    private String[][] carsImagesURLs = new String[][]{{"src/resources/yellow_loco.png", "src/resources/yellow_car.png"},
+                                                    {"src/resources/red_loco.png", "src/resources/red_car.png"},
+                                                    {"src/resources/blue_loco.png", "src/resources/blue_car.png"}};
     private Thread P1, P2, P3;
     private int isRunning = 1;
     private final int[][] route={{0,1,2,3,4,5,7,9,11,13,15,17,19,25,31,33,35,37,39,41,43,49,50,51,52,53,0},
@@ -169,10 +167,8 @@ public class Controller implements Initializable
     }
 
     private void setSingleCar(int loco, int car, String image){
-        String imager = "file:yellow_car.png";
-        System.out.println(image);
         carts[loco][car] = new ImageView();
-        carts[loco][car].setImage(new Image(new File(imager).toURI().toString()));
+        carts[loco][car].setImage(new Image(new File(image).toURI().toString()));
         carts[loco][car].setFitHeight(40);
         carts[loco][car].setFitWidth(60);
     }
@@ -261,16 +257,18 @@ public class Controller implements Initializable
     }
 
     private boolean rotateLoco(int head, int nr, int car){
-        if((route[nr][head - car]>5 && route[nr][head-car]<20) || (route[nr][head-car]>30 && route[nr][head-car]<45)){
-            carts[nr][car].setRotate(-90);
-            if(car == numberOfCarts-1) carts[nr][car].setRotate(90);
-            return true;
+        if(head - car >= 0){
+            if((route[nr][head - car] > 5 && route[nr][head - car] < 20) || (route[nr][head - car] > 30 && route[nr][head - car] < 45)){
+                carts[nr][car].setRotate(-90);
+                if(car == numberOfCarts - 1) carts[nr][car].setRotate(90);
+                return true;
+            }
         }
         return false;
     }
 
     private void moveRedTrainForward(int head, int i) {
-        if(route[1][head-i]>=45)
+        if(route[1][head - i] >= 45)
         {
             carts[1][i].setRotate(180);
             if (i == numberOfCarts - 1) carts[1][i].setRotate(0);
@@ -283,13 +281,13 @@ public class Controller implements Initializable
     }
 
     private void moveRedTrainBack(int head, int i) {
-        if(route[1][head+i]>=45){
+        if(route[1][head + i] >= 45){
             carts[1][i].setRotate(0);
-            if(i==numberOfCarts-1)carts[1][i].setRotate(180);
+            if(i == numberOfCarts - 1)carts[1][i].setRotate(180);
         }
         else{
             carts[1][i].setRotate(180);
-            if(i==numberOfCarts-1)carts[1][i].setRotate(0);
+            if(i == numberOfCarts - 1)carts[1][i].setRotate(0);
         }
     }
 
@@ -303,9 +301,9 @@ public class Controller implements Initializable
         if(i==numberOfCarts-1)carts[2][i].setRotate(0);
     }
     private void moveYellowTrainForward(int head, int i){
-        if(route[0][head-i]!=25)
+        if(route[0][head - i] != 25)
         {
-            carts[0][i].setRotate(0);
+            carts[0][i].setRotate(90);
             if (i == numberOfCarts - 1) carts[0][i].setRotate(180);
         }
     }

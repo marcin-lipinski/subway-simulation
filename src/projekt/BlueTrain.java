@@ -1,4 +1,4 @@
-package Projekt;
+package projekt;
 
 public class BlueTrain extends Train{
     public BlueTrain(Shared shared, int numberOfCarts, Controller controller, int[] route)

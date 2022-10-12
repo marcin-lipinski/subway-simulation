@@ -1,4 +1,4 @@
-package Projekt;
+package projekt;
 
 public abstract class Train extends Thread{
     protected Controller controller;
@@ -11,7 +11,7 @@ public abstract class Train extends Thread{
     protected int numberOfCarts;
     protected int number;
 
-    public Train(Shared shared, int numberOfCarts, Controller controller, int[] route)
+    protected Train(Shared shared, int numberOfCarts, Controller controller, int[] route)
     {
         this.shared = shared;
         this.numberOfCarts = numberOfCarts;
@@ -19,6 +19,7 @@ public abstract class Train extends Thread{
         this.route=route;
     }
 
+    @Override
     public void run(){
         while(true){
             switch (direction){
@@ -27,6 +28,8 @@ public abstract class Train extends Thread{
                     break;
                 case 1:
                     moveBack();
+                    break;
+                default:
                     break;
             }
             mutualSemaphoreAndMove();

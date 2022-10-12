@@ -1,4 +1,4 @@
-package Projekt;
+package projekt;
 
 public class RedTrain extends Train{
     public RedTrain(Shared shared, int numberOfCarts, Controller controller, int[] route){
